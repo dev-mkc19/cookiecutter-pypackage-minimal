@@ -60,3 +60,4 @@ docs/snippets/error_code_table.rst
 
 # Jupyter Notebook
 *.ipynb
+!playground.ipynb
