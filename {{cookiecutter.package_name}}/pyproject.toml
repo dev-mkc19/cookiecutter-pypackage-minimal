@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "{{ cookiecutter.package_slug }}"
+version = "0.1.0"
+dependencies = [
+]
+requires-python = ">=3.8"
+authors = [
+  {name = "{{ cookiecutter.author_name }}", email = "{{ cookiecutter.author_email }}"},
+]
+maintainers = [
+  {name = "{{ cookiecutter.author_name }}", email = "{{ cookiecutter.author_email }}"}
+]
+description = "{{ cookiecutter.package_description }}"
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["cli"]
+classifiers = [
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Operating System :: MacOS",
+  "Development Status :: 4 - Beta"
+]
+
+[project.optional-dependencies]
+cli = [
+  "click",
+]
+
+[project.urls]
+Homepage = "https://github.com/dev-mkc19/{{ cookiecutter.package_slug }}.git"
+Documentation = "https://github.com/dev-mkc19/{{ cookiecutter.package_slug }}.git"
+Repository = "https://github.com/dev-mkc19/{{ cookiecutter.package_slug }}.git"
+"Bug Tracker" = "https://github.com/dev-mkc19/{{ cookiecutter.package_slug }}/issues"
+
+[project.scripts]
+spam-cli = "spam:main_cli"
+
+[project.gui-scripts]
+spam-gui = "spam:main_gui"
+
+[project.entry-points."spam.magical"]
+tomatoes = "spam:main_tomatoes"
